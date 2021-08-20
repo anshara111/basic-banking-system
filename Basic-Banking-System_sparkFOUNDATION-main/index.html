@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="the sparks foundation internship certificate, donation, the sparks foundation internship, grip at the sparks foundation, grip at the sparks foundation internship, the sparks foundation grip, the sparks foundation github, the sparks foundation internship web development, the sparks foundation internship, the sparks foundation linkedin, the sparks foundation network, the sparks foundation singapore, the sparks foundation tasks, the sparks foundation web development internship, tsf, tsf at grip, grip, tsf grip, Graduate Rotational Internship Program, Payment gateway integration, task Payment gateway integration">
+<meta name="author" content="Bhavjot Singh">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/030c849e74.js" crossorigin="anonymous"></script>
+<link rel = "icon" href ="images/logo.png" type = "image/x-icon">
+<title>Bank | TSF</title>
+<style>
+body {
+margin:0;
+padding:0;
+border: 0;
+overflow-x: hidden;
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background-color:white;
+}
+
+/*--Header Div--*/
+.header {
+margin:0;
+width:100%;
+height: 100px;
+position:relative;
+background-color: rgba(0,0,0, 0.4);
+}
+
+.header-left {
+max-width: 25%;
+height: auto;
+}
+
+.header-left-logo {
+width: 130px;
+height: auto;
+margin: -2% 0 0 5%;
+} 
+
+/*--Header Right Lists--*/
+.header-right { 
+margin: -70px 40px 0 0;
+font-size:20px;
+float:right;
+}
+
+.header-right .header-right-links{ 
+display:inline;
+padding: 0 30px;
+text-decoration:none;
+color: white;
+font-weight: bold;
+transition: 0.6s;
+}
+
+.header .header-right .header-right-links:hover { 
+text-decoration:underline;
+letter-spacing: 2.5px;
+}
+
+/*--Responsive Header Hamburger Icon--*/
+.header .header-right-icon {
+display: none;
+font-size: 35px;
+float: right;
+color: white;
+position: absolute;
+top: 30%;
+right: 5%;
+}
+
+/*--Responsive Header Close Icon--*/
+.header .header-right-close-icon {
+display: none;
+font-size: 35px;
+float: right;
+color: white;
+position: absolute;
+top: 30%;
+right: 5%;
+z-index: 999;
+}
+
+/*--Header Responsive Query--*/
+@media (max-width: 880px) {
+.header {
+	font: bold 14px sans-serif;
+	width: 100%;
+	}
+
+.header .header-right .header-right-links {
+	display: none;
+	}
+
+.header .header-right-icon {
+	display: block;
+  }
+
+  .header .header-right-close-icon {
+    display: block;
+    opacity: 0;
+  }
+
+.header .Responsive-SlideDown {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0%;
+    top: -4.6%;
+    z-index: 1;
+    overflow-y: hidden;
+    transition: 0.5s ease-in-out;
+	}
+ 
+.header .Responsive-SlideDown .header-right-links {
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    padding: 40px;
+    transform: translate(0%, 125%);
+    color: white;
+  }
+}
+
+.fixed-header {
+background-color: lightcoral;
+height: 50px;
+line-height: 45px;
+width: 100%;
+text-align: center;
+}
+
+.fixed-header .fixed-header-links {
+color: black;
+padding: 0 22px;
+font-size: 25px;
+margin: 0 0 0 4%;
+transition: 0.3s;
+position: relative;
+left: 15%;
+z-index: 999;
+}
+
+.fixed-header .fixed-header-links:hover {
+letter-spacing: 3px;
+}
+
+.sticky-fixed-header {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 999;
+}
+
+.sticky-fixed-header .fixed-header-links {
+left: 0;
+}
+
+@media (max-width: 1200px) {
+    .fixed-header {
+        height: auto;
+    }
+
+    .fixed-header .fixed-header-links {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 880px) {
+    .fixed-header {
+        height: auto;
+    }
+
+    .fixed-header .fixed-header-links {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+        margin: 0% 29% 0% 0%;
+    }
+}
+/*----------------------------------------------------*/
+/*--Section Onload--*/
+.Onload {
+background-color:rgb(0, 0, 0);
+background-color:rgba(0, 0, 0, 0.9);
+width: 100%;
+height: 120vh;
+display: block;
+position: fixed;
+z-index: 9999;
+}
+
+/*--Banner--*/
+.banner-Onload {
+position: absolute;
+top: 0%;
+transform: translate(50%, 20%);
+border: 2px solid black;
+height: 60%;
+width: 50%;
+background-color: white;
+}
+
+/*--Banner Heading Logo--*/
+.banner-Onload .banner-heading-left-logo {
+width: 20%;
+height: 35%;
+position: absolute;
+left: 2.5%;
+}
+
+/*--Banner Heading--*/
+.banner-Onload .banner-heading {
+text-align: center;
+font-size: 2.5em;
+position: absolute;
+left: 28%;
+top: 6%;
+}
+
+/*--Banner Heading close button--*/
+.banner-Onload .banner-heading-right-close, .banner-Onload .banner-heading-right-close .fa-fa-close {
+float: right;
+position: absolute;
+right: 2%;
+top: 2%;
+color: black;
+font-size: 30px;
+width: 5%;
+text-align: center;
+border: 1.5px solid black;
+}
+
+/*--Banner Heading close button hover--*/
+.banner-Onload .banner-heading-right-close:hover, .banner-Onload .banner-heading-right-close .fa-fa-close:hover {
+transform: scale(1.1);
+cursor: pointer;
+}
+
+/*--Banner Sub Heading--*/
+.banner-Onload .sub-banner-heading {
+text-align: center;
+font-size: 32px;
+text-decoration: underline;
+position: absolute;
+top: 30%;
+left: 2.5%;
+}
+
+/*--Banner Topic Heading--*/
+.banner-Onload .topic-banner-heading {
+text-align: center;
+font-size: 40px;
+position: absolute;
+top: 60%;
+left: 8%;
+font-weight: 600;
+}
+
+/*--Banner Footer--*/
+.banner-Onload .banner-footer {
+font-weight: bold;
+font-size: 20px;
+position: absolute;
+bottom: 0%;
+margin: auto;
+padding: 5px 0 5px 0;
+text-align: center;
+background-color: black;
+color: white;
+width: 100%;
+}
+
+@media (max-width: 880px) {
+    .Onload {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-Onload {
+        width: 70%;
+        height: 80%;
+        top: 10%;
+        left: 15%;
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 480px) {
+    .Onload {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-Onload {
+        width: 80%;
+        min-height: 50%;
+        max-height: 80%;
+        top: 20%;
+        left: 5%;
+        transform: translate(0, 0);
+    }
+
+    .Onload .banner-Onload .banner-heading {
+        width: auto;
+        font-size: 45px;
+    }
+
+    .Onload .banner-Onload .banner-heading-left-logo {
+        width: 30%;
+        height: 30%;
+    }
+
+    .Onload .banner-Onload .sub-banner-heading {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 390px) {
+    .Onload {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-Onload {
+        width: 30%;
+        min-height: 40%;
+        max-height: 60%;
+        top: 15%;
+        left: 0%;
+        transform: translate(0, 0);
+        font-size: 11px;
+    }
+
+    .Onload .banner-Onload .banner-heading {
+        font-size: 30px;
+
+    }
+
+    .banner-Onload .banner-heading-right-close, .banner-Onload .banner-heading-right-close .fa-fa-close {
+        width: 10%;
+        font-size: 20px;
+    }
+
+    .Onload .banner-Onload .sub-banner-heading {
+        font-size: 25px;
+    }
+
+    .Onload .banner-Onload .topic-banner-heading {
+        font-size: 28px;
+    }
+}
+
+.parallax {
+background-image: url("images/1.jpg");
+min-height: 600px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.parallax-heading {
+width: 22%;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.9);
+color: silver;
+font-weight: 700;
+font-size: 35px;
+border-radius: 20px;
+padding: 25px;
+position: absolute;
+top: 350px;
+left: 480px;
+}
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media (max-width : 880px) {
+  .parallax-heading {
+    width: 50%;
+    left: 25%;
+  }
+}
+@media (max-width: 666px) {
+  .parallax {
+    background-attachment: scroll;
+    background-image: none;
+  }
+
+  .parallax-heading {
+    font-size: 25px;
+    width: 45%;
+    top: 60%;
+    left: 25%;
+  }
+}
+
+.timeline-content {
+background-color: #999999ee;
+width: 90%;
+height: auto;
+margin: 2.5% 0 0 2.5%;
+border-radius: 20px;
+padding: 25px;
+}
+
+.timeline-content h1 {
+text-align: center;
+font-size: 30px;
+}
+
+.timeline-image-left {
+display: flex;
+width: 50%;
+height: auto;
+margin: 5% 3% 3% 3%;
+}
+
+.timeline-content .right {
+display: block;
+float: right;
+width: 40%;
+text-align: justify;
+font-size: 20px;
+font-family: cursive;
+font-weight: 600;
+margin: -40% 4% 0 0;
+}
+
+@media (max-width: 880px) {
+  .timeline-content {
+    width: 80%;
+    height: 70%;
+    margin: 2% 0 0 2%;
+  }
+
+  .timeline-content .right {
+    float: none;
+    width: 80%;
+    height: auto;
+    margin: 8% 0 0 10%;
+  }
+
+  .timeline-image-left {
+    display: block;
+    width: 70%;
+    height: 40%;
+    margin: 5% 0 0 15%;
+  }
+}
+
+.stats-column {
+float: left;
+width: 20%;
+padding: 0 10px;
+}
+
+.stats-row {margin: 0 -5px;}
+
+.stats-row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.stats-card {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 16px;
+text-align: center;
+background-color: #333;
+color: white;
+border-radius: 30px;
+position: relative;
+left: 30%;
+top: 0;
+height: 150px;
+}
+
+.stats-card:hover {
+transform: scale(1.1);
+}
+
+.stats-column .stats-card p {
+font-size: 25px;
+font-weight: 700;
+font-family: cursive;
+}
+
+@media screen and (max-width: 600px) {
+  .stats-column {
+    width: 80%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .stats-card {
+    left: 0%;
+  }
+}
+
+.goal {
+text-align: center;
+margin: 8% 0 0 0;
+}
+
+@media (max-width: 600px) {
+  .goal-image {
+    width: 60%;
+    height: 50%;
+  }
+}
+
+.footer-distributed{
+background-color: #999999ee;
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font: bold 16px sans-serif;
+padding: 55px 50px;
+margin-top: 10%;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+display: inline-block;
+vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h2{
+color:  #000000;
+font: normal 40px 'Cookie', cursive;
+margin: 0% 0 0 0;
+}
+
+.footer-distributed h2 span{
+color: red;
+font-weight: 700;
+}
+
+.footer-distributed img {
+width: 30%;
+height: auto;
+margin: 0 0 -5% 5%;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+color:  #000000;
+margin: 20px 0 12px;
+padding: 0;
+}
+
+.footer-distributed .footer-links a{
+display:inline-block;
+line-height: 1.8;
+text-decoration: none;
+color:  inherit;
+font-size: 18px;
+}
+
+.footer-distributed .footer-links a:hover{
+text-decoration: underline;
+color: red;
+}
+
+/* Footer Center */
+.footer-center {
+width: 30%;
+margin: -1.6% 0 0 0;
+}
+
+.footer-center .heading {
+font-size: 20px;
+font-weight: 600;
+padding: 0 0 2.5% 0;
+}
+
+.footer-center a {
+width: 10%;
+text-decoration: none;
+color: #343638ec;
+line-height: 35px;
+font-size: 20px;
+font-weight: 700;
+margin: 0 50% 0 0%;
+}
+
+.footer-center a:hover {
+color: red;
+text-decoration: underline;
+font-size: 22px;
+font-weight: 800;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+width: 20%;
+margin: 0 0 0 4%;
+}
+
+.footer-distributed .footer-company-about{
+line-height: 20px;
+color:  #343638ec;
+font-size: 13px;
+font-weight: normal;
+margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+display: block;
+color:  #000000;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+display: inline-block;
+width: 45px;
+height: 35px;
+cursor: pointer;
+background-color:  #33383b;
+border-radius: 2px;
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+margin: 0;
+}
+
+.footer-distributed .footer-icons a:hover{
+transform: scale(1.3);
+background-color: red;
+}
+
+.footer-bottom {
+background-color: #333;
+padding: 10px;
+}
+
+.footer-bottom p {
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 22px;
+}
+
+.footer-bottom .footer-content a {
+color: white;
+}
+
+.footer-bottom .footer-content a:hover{
+color: red;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed {
+	  font: bold 14px sans-serif;
+	}
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+	  display: block;
+	  width: 100%;
+	  margin-bottom: 40px;
+	  text-align: center;
+	}
+
+  .footer-distributed .footer-center .heading {
+	  margin: 0% 0% 0% 2.5%;
+	}
+
+    .footer-distributed .footer-center a {
+        margin: -5% 50% 0 44%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer-distributed {
+        margin-top: 40%;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer-distributed {
+        margin-top:   0%;
+    }
+}
+</style>
+</head>
+<body>
+<section class="Onload" id="Onload">
+    <div class="banner-Onload" id="banner-Onload">
+        <img src="images/logo.png" class="banner-heading-left-logo">
+        <p class="banner-heading">The Sparks Foundation</p>
+        <span class="banner-heading-right-close" id="banner-heading-right-close" onclick="closeBanner()"><i class="fa fa-close"></i></span>
+        <p class="sub-banner-heading">Graduate Rotational Internship Program (GRIP)<br><span style="color: blue; font-weight: bolder; text-decoration: underline;">Apr 2021</span></p>
+        <p class="topic-banner-heading"><span style="color: blue; font-weight: bolder;">Task #1</span> Basic Banking System</p>
+        <p class="banner-footer">Designed & Developed with <i class="fa fa-clock-o" style="color: red;"></i> by <a href="devloper.html" style="color: white;">Bhavjot Singh</a></p>
+    </div>
+</section>
+
+<script>
+function closeBanner()
+{
+    document.getElementById("Onload").style.display= "none";
+}
+</script>
+
+<!----------------------------------------------------------------------------->
+<section class="page-header">
+    <div class="header">
+        <div class="header-left"> 
+            <img src="images/logo1.png" class="header-left-logo">
+        </div>    
+        <div id="header-right" class="header-right">
+          <a href="index.html" class="header-right-links">Home</a>
+          <a href="about.html" class="header-right-links">About</a>
+          <a href="contact.html" class="header-right-links">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="header-right-icon" onclick="ResponsiveFunction()"><i class="fa fa-bars"></i></a>
+        <a href="javascript:void(0);" class="header-right-close-icon" id="closeIcon" onclick="ResponsiveFunction()"><i class="fa fa-close"></i></a>
+    </div>
+    <div class="fixed-header" id="fixed-header">
+        <a href="customers.php" class="fixed-header-links"><i class="fas fa-user"> Customers</i></a>
+        <a href="loans.html" class="fixed-header-links"><i class="fas fa-rupee-sign"> Loans</i></a>
+        <a href="invest.html" class="fixed-header-links"><i class="fas fa-money-check"> Invest</i></a>
+        <a href="insure.html" class="fixed-header-links"><i class="fas fa-umbrella"> Insure</i></a>    
+    </div>
+</section>
+
+<!--Script for header-->
+<script>
+function ResponsiveFunction()
+{  
+    var nav = document.getElementById("header-right");
+    var closeIcon = document.getElementById("closeIcon");
+  
+    if (nav.className === "header-right")
+    {
+        nav.className += " Responsive-SlideDown";
+        closeIcon.style.opacity = "1";
+    }
+    else
+    {
+        nav.className = "header-right";
+        closeIcon.style.opacity = "0";
+    }
+}   
+</script>  
+<!--End of Script for header-->
+
+<!---Start of sticky header script-->
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("fixed-header");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky-fixed-header");
+      } else {
+        header.classList.remove("sticky-fixed-header");
+      }
+    }
+</script>
+<!---End of sticky Header-->
+
+<div class="parallax-heading">The Bank of TSF</div>
+<div class="parallax"></div>
+
+<section class="page-content" style="height: auto;">
+  <div class="timeline-content">
+    <h1>Leave Your Financial Decisions To Us</h1>
+    <img src="images/timeline.png" class="timeline-image-left">
+    <p class="right">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum aliquid et corporis repellat! 
+      Magnam, sed dolores earum perferendis delectus adipisci asperiores iusto, alias quo, ut rerum deserunt facilis dolore maiores!
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto assumenda eos voluptatem minima, 
+      cumque temporibus sunt magnam laboriosam harum veniam facilis vitae impedit provident totam illo recusandae eligendi iste quasi.</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="stats-row">
+    <div class="stats-column">
+      <div class="stats-card">
+        <p>130 Billion+</p>
+        <h2><i class="fa fa-user"> Happy Customers</i></h2>
+      </div>
+    </div>
+      
+    <div class="stats-column">
+      <div class="stats-card">
+        <p>90 Billion</p>
+        <h2><i class="fa fa-user"> Digital Banking Users</i></h2>
+      </div>
+    </div>
+      
+    <div class="stats-column">
+      <div class="stats-card">
+        <p>15+</p>
+        <h2><i class="fa fa-wrench"> Services</i></h2>
+      </div>
+    </div>
+      
+    <div class="stats-column">
+      <div class="stats-card">
+        <p>100%</p>
+        <h2><i class="fa fa-smile-o"> Satisfaction & Co-Operation</i></h2>
+      </div>
+    </div>
+  </div>    
+  
+  <div class="goal">
+    <h1>Our Goal: <q>Make Bank of TSF Your World for All Financial Needs</q></h1>
+    <img src="images/tech.png" class="goal-image">
+  </div>
+</section>
+
+<section class="page-footer">
+  <footer class="footer-distributed">
+      <div class="footer-left">
+          <h2>Bank of <span>TSF</span></h2>
+          <img src="images/logo1.png">
+          <p class="footer-links">
+              <a href="index.html">Home</a>
+              ·
+              <a href="about.html">About</a>
+              ·
+              <a href="contact.html">Contact</a>
+          </p>
+    </div>
+
+    <div class="footer-center">
+      <p class="heading">Quick Links</p>
+      <a href="customers.php">Customers</a>
+      <a href="loans.html">Loans</a>
+      <a href="invest.html">Invest</a>
+      <a href="insure.html">Insure</a>
+    </div>
+
+    <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the organization</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam odit libero temporibus voluptate vitae ipsam laboriosam at, 
+        animi possimus, suscipit, fuga quod ab similique esse enim. Obcaecati nobis beatae architecto!
+        </p>
+
+        <div class="footer-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+      <p class="footer-content">Designed & Developed with <i class="fa fa-clock-o" style="color: red;"></i> by <a href="devloper.html">Bhavjot Singh</a></p>
+  </div>
+</section>
+</body>
+</html>
